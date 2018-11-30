@@ -23,7 +23,7 @@
     - python-pyscard
     - python-dev
 
-- shell: gpg --recv-key E07DBBB3A8FFA884
+- shell: gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-key E07DBBB3A8FFA884
 - file: path=/root/.gnupg/gpg.conf state=touch
 - lineinfile:
     dest: /root/.gnupg/gpg.conf
@@ -31,7 +31,7 @@
     regexp: 'E07DBBB3A8FFA884'
     line: 'trusted-key E07DBBB3A8FFA884'
 
-- shell: gpg --recv-key 8E47A1EC35A1551D
+- shell: gpg --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-key 8E47A1EC35A1551D
 - file: path=/root/.gnupg/gpg.conf state=touch
 - lineinfile:
     dest: /root/.gnupg/gpg.conf
