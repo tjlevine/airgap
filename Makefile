@@ -16,4 +16,4 @@ clean:
 	rm -rf ansible/main.retry
 
 all: clean
-	packer build --parallel=false packer/build.json
+	PACKER_LOG=1 packer build --parallel=false packer/build.json
