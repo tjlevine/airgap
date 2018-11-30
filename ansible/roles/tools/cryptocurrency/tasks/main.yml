@@ -13,7 +13,7 @@
     - python-flufl.password
     - python-mnemonic
 
-- shell: gpg --recv-key 91F3B339B9A02A3D
+- shell: gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-key 91F3B339B9A02A3D
 - file: path=/root/.gnupg/gpg.conf state=touch
 - lineinfile:
     dest: /root/.gnupg/gpg.conf
